@@ -11,31 +11,31 @@
             border: 1px solid #ccc;
             border-radius: 10px;
             text-align: center;
-            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-            font-family: sans-serif; /* Use a cleaner font */
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+            font-family: sans-serif;
         }
         .profile-image {
             width: 100px;
             height: 100px;
-            border-radius: 50%; /* Make it circular */
+            border-radius: 50%;
             margin-bottom: 10px;
-            object-fit: cover; /* Prevents image distortion */
+            object-fit: cover;
         }
         .icon {
-            margin: 0 5px; /* Adjust spacing */
+            margin: 0 5px;
             cursor: pointer;
-            width: 30px; /* Consistent icon size */
+            width: 30px;
             height: 30px;
         }
         .contact-info {
-            margin-top: 15px; /* Add some space */
+            margin-top: 15px;
         }
         .contact-info p {
-            margin: 5px 0; /* Space between contact details */
+            margin: 5px 0;
         }
         button {
             padding: 8px 15px;
-            background-color: #4CAF50; /* Green button */
+            background-color: #4CAF50;
             color: white;
             border: none;
             border-radius: 5px;
@@ -43,53 +43,54 @@
             margin-top: 10px;
         }
         button:hover {
-            background-color: #45a049; /* Darker green on hover */
+            background-color: #45a049;
         }
-
     </style>
 </head>
 <body>
     <div class="card">
-        <img src="profile.jpg" alt="Profile Picture" class="nurhakim-profile.png">  <h2>Nur Hakim</h2>
-        <p>Project Engineer</p>
+        <img src="nurhakim-profile.png" alt="Profile Picture" class="profile-image">
+        <p>Nur Hakim</p>  <p>Project Engineer</p>
 
         <div class="contact-info">
             <p>Email: <span id="email">nurhakim520@gmail.com</span></p>
-            <p>Phone: <span id="phone">+6018-8704818</span></p> <p>Location: <span id="location">Selangor, Malaysia</span></p> </div>
+            <p>Phone: <span id="phone">+6018-8704818</span></p>
+            <p>Location: <span id="location">Selangor, Malaysia</span></p> </div>
 
         <div>
             <a href="https://www.linkedin.com/in/hakim-mohammad-76151523a/" target="_blank">
                 <img src="linkedin-icon.png" alt="LinkedIn" class="icon">
             </a>
             <a href="https://www.facebook.com/hamza.nurhakim/" target="_blank">
-                <img src="facebook-icon.png" alt="Twitter" class="icon">
-            </a>
-            <a href="https://github.com/nurhakim" target="_blank"> <img src="github-icon.png" alt="GitHub" class="icon">
+                <img src="facebook-icon.png" alt="Facebook" class="icon">  </a>
+            <a href="https://https://github.com/nurhakim-my" target="_blank">
+                <img src="github-icon.png" alt="GitHub" class="icon">
             </a>
         </div>
 
         <button onclick="copyEmail()">Copy Email</button>
-        <button onclick="copyPhone()">Copy Phone</button> </div>
+        <button onclick="copyPhone()">Copy Phone</button>
+    </div>
 
     <script>
         function copyEmail() {
             const email = document.getElementById('email').innerText;
-            navigator.clipboard.writeText(email).then(() => {
-                alert('Email copied to clipboard!');
-            }).catch(err => {
-                console.error('Failed to copy: ', err); // Handle errors
-                alert('Failed to copy email.'); // Inform user if error
-            });
+            navigator.clipboard.writeText(email)
+                .then(() => alert('Email copied to clipboard!'))
+                .catch(err => {
+                    console.error('Failed to copy: ', err);
+                    alert('Failed to copy email.');
+                });
         }
 
         function copyPhone() {
             const phone = document.getElementById('phone').innerText;
-            navigator.clipboard.writeText(phone).then(() => {
-                alert('Phone number copied to clipboard!');
-            }).catch(err => {
-                console.error('Failed to copy: ', err);
-                alert('Failed to copy phone number.');
-            });
+            navigator.clipboard.writeText(phone)
+                .then(() => alert('Phone number copied to clipboard!'))
+                .catch(err => {
+                    console.error('Failed to copy: ', err);
+                    alert('Failed to copy phone number.');
+                });
         }
     </script>
 </body>
